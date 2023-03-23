@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as FiIcons from "react-icons/fi";
+import SidebarData from './SidebarData';
+import SubMenu from './SubMenu';
 
 const Nav = styled.div`
 background: black; 
@@ -20,22 +22,52 @@ height: 80px;
 display: flex;
 justify-content: flex-start;
 align-items: center;
-color: white;
+
 `;
 
 const SidebarNav = styled.nav`
+background: #15171c;
+width: 250px;
+height: 100vh;
+display: flex;
+justify-content: center;
+position: fixed;
+top: 0;
+left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
+transition: 350ns;
+z-index: 10;
+`;
 
-`
 
-const Sidebar = ({backgroundColor}) => {
+const SidebarWrap = styled.div`
+width:100%;
+`;
+
+const Sidebar = (backgroundColor , iconColor) => {
+  
+  const [sidebar, setSidebar] = useState(false);
+
+  const showSidebar = () => setSidebar(!sidebar);
+ 
+
 
   return (
     <>
-    <Nav style={{ backgroundColor}}>
+    <Nav style={backgroundColor}>
       <NavIcon to='#'>
-        <FiIcons.FiAlignCenter />
+        <FiIcons.FiAlignCenter color='white' onClick={showSidebar} />
       </NavIcon>
     </Nav>
+    <SidebarNav sidebar={sidebar}>
+      <SidebarWrap>
+      <NavIcon to={SidebarData}>
+        <AiIcons.AiOutlineClose color='white' onClick={showSidebar}/>
+      </NavIcon>
+      {SidebarData.map((item, index) => {
+        return <SubMenu item={item} key={index} />;
+      } )}
+      </SidebarWrap>
+    </SidebarNav>
     </>
   );
 };

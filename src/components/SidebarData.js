@@ -3,6 +3,7 @@ import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from "react-icons/ai";
 import * as RiIcons from "react-icons/ri";
 import * as IoIcons from "react-icons/io";
+import * as TbIcons from "react-icons/tb";
 
 export const SidebarData = [
     {
@@ -26,7 +27,7 @@ export const SidebarData = [
  {
     title: 'Reports' ,
     path: '/reports' ,
-    icon: <RiIcons.RiHomeHeartLine/> ,
+    icon: <IoIcons.IoIosPaper/> ,
     iconClosed: <RiIcons.RiArrowDownSLine/> ,
     subNav: [
         {
@@ -50,6 +51,18 @@ export const SidebarData = [
     title:'Products' ,
     path:'/products' ,
     icon: <FaIcons.FaOpencart/>
+ },
+ {
+    title: 'Messages' ,
+    path: '/messages' ,
+    icon: <TbIcons.TbMessageCircle2/> ,
+    iconClosed: <TbIcons.TbMessageCircle2/> 
+ },
+ {
+    title: 'Team' ,
+    path: '/team' ,
+    icon: <AiIcons.AiOutlineTeam/> ,
+    iconClosed: <AiIcons.AiOutlineTeam/> 
  }
 ]
 
