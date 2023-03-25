@@ -6,6 +6,8 @@ import * as AiIcons from 'react-icons/ai';
 import * as FiIcons from "react-icons/fi";
 import SidebarData from './SidebarData';
 import SubMenu from './SubMenu';
+import { IconContext } from 'react-icons/lib';
+
 
 const Nav = styled.div`
 background: black; 
@@ -53,21 +55,23 @@ const Sidebar = (backgroundColor , iconColor) => {
 
   return (
     <>
+    <IconContext.Provider value={{color:'white'}}>
     <Nav style={backgroundColor}>
       <NavIcon to='#'>
-        <FiIcons.FiAlignCenter color='white' onClick={showSidebar} />
+        <FiIcons.FiAlignCenter onClick={showSidebar} />
       </NavIcon>
     </Nav>
     <SidebarNav sidebar={sidebar}>
       <SidebarWrap>
       <NavIcon to={SidebarData}>
-        <AiIcons.AiOutlineClose color='white' onClick={showSidebar}/>
+        <AiIcons.AiOutlineClose onClick={showSidebar}/>
       </NavIcon>
       {SidebarData.map((item, index) => {
         return <SubMenu item={item} key={index} />;
       } )}
       </SidebarWrap>
     </SidebarNav>
+    </IconContext.Provider>
     </>
   );
 };

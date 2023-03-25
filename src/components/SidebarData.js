@@ -14,12 +14,12 @@ export const SidebarData = [
     subNav: [
         {
             title: 'Users' ,
-            path: '/overview/users' ,
+            path: '/home/users' ,
             icon: <IoIcons.IoIosPaper/> ,
         } ,
         {
             title: 'Revenue' ,
-            path: '/overview/revenue' ,
+            path: '/home/revenue' ,
             icon: <IoIcons.IoIosPaper/> ,
         } ,
     ]
