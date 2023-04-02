@@ -12,9 +12,12 @@ list-style: none;
 height: 60px;
 text-decoration-line: none;
 &:hover {
-    background: #252831;
-    border-left: 4px solid #632ce4;
+    background:#303030;
+    color: #fff;
+    border-left: 4px solid #F0F8FF;
     cursor: pointer;
+   
+
 }
 `;
 
@@ -31,8 +34,9 @@ color: #fff;
 display: list-item;
 font-size: 18px;
 &:hover {
-    background: #632ce4;
-    border-left: 4px solid #632ce4;
+    background:#303030;
+    color: #fff;
+    border-left: 4px solid #F0F8FF;
     cursor: pointer;
 }
 

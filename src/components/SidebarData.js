@@ -63,7 +63,8 @@ export const SidebarData = [
     path: '/team' ,
     icon: <AiIcons.AiOutlineTeam/> ,
     iconClosed: <AiIcons.AiOutlineTeam/> 
- }
+ },
+ 
 ]
 
 

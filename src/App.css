@@ -1,17 +1,21 @@
+
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Piefont;
-  
-
 }
+
+
+
 
 .home,
 .users,
 .revenue,
 .reports,
-.products{
+.products,
+.team{
  display: flex;
  height: 90vh;
  align-items: center;
@@ -21,3 +25,46 @@
  font-style: italic;
 }
 
+.buttonStyle{
+  box-sizing: border-box;
+  height: 5rem;
+  padding: 30px;
+  background-color: rgb(179, 217, 217);
+  color:black;
+  border: 2px solid bisque;
+  cursor: pointer;
+  position: absolute;
+  top:70%;
+  border-radius:50px;
+  box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  margin: 40px;
+  cursor: pointer;
+}
+
+.confirmButtonStyle{
+  width: 10rem;
+  height: 2rem;
+  background-color: whitesmoke;
+  color:black;
+  margin:5px;
+  border-radius: 50%;
+  border: 1px solid black;
+  cursor: pointer;
+
+}
+
+.divStyle{
+  display: flex;
+  flex-direction:rem;
+  position: absolute;
+  padding: 1rem;
+}
+
+.debug{
+  border:1px solid red;
+}
